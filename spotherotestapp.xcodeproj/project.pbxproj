@@ -11,6 +11,10 @@
 		D0DB9EC326D2FAFE00119766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EC226D2FAFE00119766 /* ContentView.swift */; };
 		D0DB9EC526D2FB0100119766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9EC426D2FB0100119766 /* Assets.xcassets */; };
 		D0DB9EC826D2FB0100119766 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9EC726D2FB0100119766 /* Preview Assets.xcassets */; };
+		D0DB9ED226D3022A00119766 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED126D3022A00119766 /* UserViewModel.swift */; };
+		D0DB9ED426D3024D00119766 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED326D3024D00119766 /* UserModel.swift */; };
+		D0DB9ED626D302F000119766 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED526D302F000119766 /* UserAPI.swift */; };
+		D0DB9ED826D3038700119766 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED726D3038700119766 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		D0DB9EC426D2FB0100119766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DB9EC726D2FB0100119766 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D0DB9EC926D2FB0100119766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0DB9ED126D3022A00119766 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		D0DB9ED326D3024D00119766 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D0DB9ED526D302F000119766 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		D0DB9ED726D3038700119766 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				D0DB9EC026D2FAFE00119766 /* spotherotestappApp.swift */,
-				D0DB9EC226D2FAFE00119766 /* ContentView.swift */,
+				D0DB9EE026D30D3600119766 /* Views */,
 				D0DB9EC426D2FB0100119766 /* Assets.xcassets */,
 				D0DB9EC926D2FB0100119766 /* Info.plist */,
 				D0DB9EC626D2FB0100119766 /* Preview Content */,
+				D0DB9EDE26D30CFF00119766 /* ViewModels */,
+				D0DB9EDF26D30D1B00119766 /* Models */,
+				D0DB9EE126D30D8500119766 /* API */,
 			);
 			path = spotherotestapp;
 			sourceTree = "<group>";
@@ -67,6 +78,39 @@
 				D0DB9EC726D2FB0100119766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D0DB9EDE26D30CFF00119766 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB9ED126D3022A00119766 /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D0DB9EDF26D30D1B00119766 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB9ED326D3024D00119766 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0DB9EE026D30D3600119766 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB9EC226D2FAFE00119766 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0DB9EE126D30D8500119766 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB9ED526D302F000119766 /* UserAPI.swift */,
+				D0DB9ED726D3038700119766 /* APIClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DB9EC326D2FAFE00119766 /* ContentView.swift in Sources */,
+				D0DB9ED826D3038700119766 /* APIClient.swift in Sources */,
+				D0DB9ED226D3022A00119766 /* UserViewModel.swift in Sources */,
 				D0DB9EC126D2FAFE00119766 /* spotherotestappApp.swift in Sources */,
+				D0DB9ED426D3024D00119766 /* UserModel.swift in Sources */,
+				D0DB9ED626D302F000119766 /* UserAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,9 @@
 		D0DB9ED426D3024D00119766 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED326D3024D00119766 /* UserModel.swift */; };
 		D0DB9ED626D302F000119766 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED526D302F000119766 /* UserAPI.swift */; };
 		D0DB9ED826D3038700119766 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9ED726D3038700119766 /* APIClient.swift */; };
+		D0DB9EE326D3F1DE00119766 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE226D3F1DE00119766 /* UserListView.swift */; };
+		D0DB9EE526D3F24F00119766 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE426D3F24F00119766 /* UserRowView.swift */; };
+		D0DB9EE726D3F63A00119766 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE626D3F63A00119766 /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		D0DB9ED326D3024D00119766 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D0DB9ED526D302F000119766 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		D0DB9ED726D3038700119766 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		D0DB9EE226D3F1DE00119766 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		D0DB9EE426D3F24F00119766 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		D0DB9EE626D3F63A00119766 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				D0DB9EC226D2FAFE00119766 /* ContentView.swift */,
+				D0DB9EE226D3F1DE00119766 /* UserListView.swift */,
+				D0DB9EE426D3F24F00119766 /* UserRowView.swift */,
+				D0DB9EE626D3F63A00119766 /* UserDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,11 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DB9EE326D3F1DE00119766 /* UserListView.swift in Sources */,
 				D0DB9EC326D2FAFE00119766 /* ContentView.swift in Sources */,
 				D0DB9ED826D3038700119766 /* APIClient.swift in Sources */,
 				D0DB9ED226D3022A00119766 /* UserViewModel.swift in Sources */,
+				D0DB9EE726D3F63A00119766 /* UserDetailView.swift in Sources */,
 				D0DB9EC126D2FAFE00119766 /* spotherotestappApp.swift in Sources */,
 				D0DB9ED426D3024D00119766 /* UserModel.swift in Sources */,
+				D0DB9EE526D3F24F00119766 /* UserRowView.swift in Sources */,
 				D0DB9ED626D302F000119766 /* UserAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

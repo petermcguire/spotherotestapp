@@ -16,6 +16,8 @@ struct UserDetailView: View {
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             Text(user.email)
                 .font(.subheadline)
+            WorkedHourPeriodListView(id: user.id)
+            Spacer()
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00A15D326D4317100E85F49 /* WorkedHourPeriodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00A15D226D4317100E85F49 /* WorkedHourPeriodListView.swift */; };
 		D0DB9EC126D2FAFE00119766 /* spotherotestappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EC026D2FAFE00119766 /* spotherotestappApp.swift */; };
 		D0DB9EC326D2FAFE00119766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EC226D2FAFE00119766 /* ContentView.swift */; };
 		D0DB9EC526D2FB0100119766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9EC426D2FB0100119766 /* Assets.xcassets */; };
@@ -18,9 +19,13 @@
 		D0DB9EE326D3F1DE00119766 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE226D3F1DE00119766 /* UserListView.swift */; };
 		D0DB9EE526D3F24F00119766 /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE426D3F24F00119766 /* UserRowView.swift */; };
 		D0DB9EE726D3F63A00119766 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE626D3F63A00119766 /* UserDetailView.swift */; };
+		D0DB9EE926D3FB2600119766 /* WorkedHourPeriodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EE826D3FB2600119766 /* WorkedHourPeriodModel.swift */; };
+		D0DB9EEB26D3FB9300119766 /* WorkedHourPeriodAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EEA26D3FB9300119766 /* WorkedHourPeriodAPI.swift */; };
+		D0DB9EED26D4004200119766 /* WorkedHourPeriodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9EEC26D4004200119766 /* WorkedHourPeriodViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00A15D226D4317100E85F49 /* WorkedHourPeriodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkedHourPeriodListView.swift; sourceTree = "<group>"; };
 		D0DB9EBD26D2FAFE00119766 /* spotherotestapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spotherotestapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DB9EC026D2FAFE00119766 /* spotherotestappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spotherotestappApp.swift; sourceTree = "<group>"; };
 		D0DB9EC226D2FAFE00119766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +39,9 @@
 		D0DB9EE226D3F1DE00119766 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		D0DB9EE426D3F24F00119766 /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
 		D0DB9EE626D3F63A00119766 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		D0DB9EE826D3FB2600119766 /* WorkedHourPeriodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkedHourPeriodModel.swift; sourceTree = "<group>"; };
+		D0DB9EEA26D3FB9300119766 /* WorkedHourPeriodAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkedHourPeriodAPI.swift; sourceTree = "<group>"; };
+		D0DB9EEC26D4004200119766 /* WorkedHourPeriodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkedHourPeriodViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				D0DB9ED126D3022A00119766 /* UserViewModel.swift */,
+				D0DB9EEC26D4004200119766 /* WorkedHourPeriodViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -98,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D0DB9ED326D3024D00119766 /* UserModel.swift */,
+				D0DB9EE826D3FB2600119766 /* WorkedHourPeriodModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 				D0DB9EE226D3F1DE00119766 /* UserListView.swift */,
 				D0DB9EE426D3F24F00119766 /* UserRowView.swift */,
 				D0DB9EE626D3F63A00119766 /* UserDetailView.swift */,
+				D00A15D226D4317100E85F49 /* WorkedHourPeriodListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +129,7 @@
 			children = (
 				D0DB9ED526D302F000119766 /* UserAPI.swift */,
 				D0DB9ED726D3038700119766 /* APIClient.swift */,
+				D0DB9EEA26D3FB9300119766 /* WorkedHourPeriodAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -192,14 +204,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DB9EE326D3F1DE00119766 /* UserListView.swift in Sources */,
+				D0DB9EEB26D3FB9300119766 /* WorkedHourPeriodAPI.swift in Sources */,
 				D0DB9EC326D2FAFE00119766 /* ContentView.swift in Sources */,
+				D0DB9EED26D4004200119766 /* WorkedHourPeriodViewModel.swift in Sources */,
 				D0DB9ED826D3038700119766 /* APIClient.swift in Sources */,
 				D0DB9ED226D3022A00119766 /* UserViewModel.swift in Sources */,
 				D0DB9EE726D3F63A00119766 /* UserDetailView.swift in Sources */,
 				D0DB9EC126D2FAFE00119766 /* spotherotestappApp.swift in Sources */,
+				D0DB9EE926D3FB2600119766 /* WorkedHourPeriodModel.swift in Sources */,
 				D0DB9ED426D3024D00119766 /* UserModel.swift in Sources */,
 				D0DB9EE526D3F24F00119766 /* UserRowView.swift in Sources */,
 				D0DB9ED626D302F000119766 /* UserAPI.swift in Sources */,
+				D00A15D326D4317100E85F49 /* WorkedHourPeriodListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,15 @@ import SwiftUI
 
 
 struct WorkedHourPeriodListView: View {
-    var id: Int
+    @State var showSheetView = false
     @ObservedObject var workedHourPeriodViewModel: WorkedHourPeriodViewModel
+    @State private var periodDate = Date()
+    @State private var periodDurationHours = 0
+    @State private var periodDurationMinutes = 0
+    let hours = Array(0...23)
+    let minutes = stride(from: 0, to: 60, by: 15)
+    var id: Int
+
     
     // specify init so we can use passed id to make view model
     init(id: Int) {
@@ -19,22 +26,26 @@ struct WorkedHourPeriodListView: View {
     }
     
     var body: some View {
-        NavigationView {
+        VStack {
             List(workedHourPeriodViewModel.periods, id: \.self) { period in
                 Text(period.date + ": " + period.hours + " hours")
             }
+            Spacer()
         }
-        .navigationBarItems(trailing: Button(action: onAdd) { Image(systemName: "plus") })
-    }
-    
-    func onAdd() {
-        
+        .navigationBarTitle(Text("Hours"), displayMode: .inline)
+        .navigationBarItems(trailing:
+            Button( action: { showSheetView.toggle() } ) {
+                Image(systemName: "plus")
+            }
+        ).sheet(isPresented: $showSheetView) {
+            AddWorkedHourPeriodView(showSheetView: self.$showSheetView, id: self.id)
+                .environmentObject(self.workedHourPeriodViewModel)
+        }
     }
 }
 
 struct WorkedHourPeriodListView_Previews: PreviewProvider {
     static var previews: some View {
         WorkedHourPeriodListView(id: 1)
-//        Text("hello")
     }
 }

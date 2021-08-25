@@ -12,12 +12,7 @@ struct UserDetailView: View {
     
     var body: some View {
         VStack {
-            Text(user.first_name + " " + user.last_name)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            Text(user.email)
-                .font(.subheadline)
             WorkedHourPeriodListView(id: user.id)
-            Spacer()
         }
     }
 }

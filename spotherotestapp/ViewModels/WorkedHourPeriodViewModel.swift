@@ -11,6 +11,7 @@ import Combine
 class WorkedHourPeriodViewModel: ObservableObject {
     
     @Published var periods: [WorkedHourPeriod] = []
+    @Published var period: PostWorkedHourPeriod?
     var cancellationToken: AnyCancellable?
     
     init(id: Int) {
@@ -34,8 +35,17 @@ extension WorkedHourPeriodViewModel {
             })
     }
     
-    func addPeriod(workedHourPeriod: WorkedHourPeriod) {
-        
+    func addPeriod(id: Int, workedHourPeriod: PostWorkedHourPeriod) {
+        cancellationToken = WorkedHourPeriodAPI.postWorkedHourPeriod(id: id, workedHourPeriod: workedHourPeriod)
+            .mapError({ (error) -> Error in
+                print(error)
+                return error
+            })
+            .sink(receiveCompletion: { _ in },
+                  receiveValue: {
+                    self.period = $0
+                    self.getPeriods(id: id)
+            })
     }
     
 }

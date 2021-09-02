@@ -10,16 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel = UserViewModel()
     var body: some View {
-        List(viewModel.users) { user in // 2
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(user.first_name) // 3a
-                        .font(.headline)
-                    Text(user.email) // 3b
-                        .font(.subheadline)
-                }
-            }
-        }
+        UserListView(users: viewModel.users)
     }
 }
 

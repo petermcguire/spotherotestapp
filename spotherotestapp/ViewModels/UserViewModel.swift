@@ -10,11 +10,11 @@ import Combine
 
 class UserViewModel: ObservableObject {
     
-    @Published var users: [User] = [] // 1
-    var cancellationToken: AnyCancellable? // 2
+    @Published var users: [User] = []
+    var cancellationToken: AnyCancellable?
     
     init() {
-        getUsers() // 3
+        getUsers()
     }
     
 }
@@ -23,14 +23,14 @@ extension UserViewModel {
     
     // Subscriber implementation
     func getUsers() {
-        cancellationToken = UserAPI.request(.allActiveUsers ) // 4
-            .mapError({ (error) -> Error in // 5
+        cancellationToken = UserAPI.allActiveUsers()
+            .mapError({ (error) -> Error in
                 print(error)
                 return error
             })
-            .sink(receiveCompletion: { _ in }, // 6
+            .sink(receiveCompletion: { _ in },
                   receiveValue: {
-                    self.users = $0 // 7
+                    self.users = $0
             })
     }
     
